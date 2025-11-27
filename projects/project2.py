@@ -38,7 +38,7 @@ elif studying_result_Of_day < study_time_Current_Day_required and studying_resul
 elif studying_result_Of_day == 0:
     print("You didnt do shit this day. you're not good enough. DO the work DOUBLE tomorrow.")
 
-productivity_tracker = {"Workout_time": workout_result_of_day,
+habit_tracker = {"Workout_time": workout_result_of_day,
                         "Coding time": coding_result_of_day,
                         "Study time": studying_result_Of_day
 }
@@ -47,10 +47,8 @@ productivity_tracker = {"Workout_time": workout_result_of_day,
 
 
 
-with open(data_location, "w") as file:
-    json.dump(productivity_tracker, file, indent=4)
+with open(data_location, "w") as file:  
+    json.dump(habit_tracker, file, indent=4)
     print("Following file was created")
 
-
-#How can you design a Python project that i ntegrates file handling, JSONstu parsing, and user interaction to create a personal productivity tracker—recording daily study hours, workout routines, and coding progress—while providing visualizations, streak tracking, and motivational prompts, ensuring efficiency, discipline, and adaptability across multiple tasks and goals?
     
